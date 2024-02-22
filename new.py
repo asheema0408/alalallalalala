@@ -1,15 +1,17 @@
 import random 
 
-my_list = [6, 9, 80, 3, 7, 4]
+class Animal:
+   def __init__(self, name, color):
+      self.name = name
+      self.color = color
+
+   def animals_namecolor(self):
+      print("ja jsem " + self.name + " a moje barva je " + self.color)
+
+koza = Animal("koza", "bila")
+ryba = Animal("ryba", "ruzova")
+zirafa = Animal("zirafa", "hnedo zluta")
+
+random_kotrmelce = random.choice([koza, ryba, zirafa])
+random_kotrmelce.animals_namecolor() 
  
-print(my_list)
-cislo = random.choice(my_list)
-print(cislo)
-odpoved = input()
-if my_list[int(odpoved)] == cislo:
-   print("das ist gut")
-else:
-   print("das ist spate gut")
-
-
-
